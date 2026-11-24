@@ -1,8 +1,10 @@
 # 🐾 Pawer
 
 > **A super lightweight browsing application designed specifically for Streamlit apps and local web tools.**  
-> Built for speed, offline workflows, zero telemetry, and complete local privacy. **Not designed to browse the open internet.**
+> Built for speed, offline workflows, zero telemetry, and complete local privacy. **Not designed to browse the open internet.
 > Pawer is intentionally designed NOT to browse the open web**
+> A LOT of Room for improvements
+> Built with AI
 
 ---
 
