@@ -1,25 +1,26 @@
 # 🐾 Pawer
 
 > **A super lightweight browsing application designed specifically for Streamlit apps and local web tools.**  
-> Built for speed, offline workflows, zero telemetry, and complete local privacy. **Not designed to browse the open internet.**
+> Built for speed, offline workflows, zero telemetry, and complete local privacy. **Not designed to browse the open internet.
+> Pawer is intentionally designed NOT to browse the open web**
+> A LOT of Room for improvements
+> Built with AI
 
 ---
 
-## 💡 Why Pawer?
+## 💡Pawer?
 
 General-purpose browsers like Google Chrome and Mozilla Firefox are built to browse the open web. For local development, running Streamlit dashboards, or viewing internal tools, they come with substantial drawbacks:
-- **Massive Resource Bloat**: Modern Chrome or Firefox often consumes 800MB to 1.5GB of RAM just idling with a couple tabs.
+- **Massive Resource Bloat**: Modern Chrome or Firefox often consumes 500MB to 1.5GB of RAM just idling with a couple tabs.
 - **Unwanted Internet Wandering**: Search engine suggestions, cloud analytics, tracking scripts, and external links distract from local tasks.
 - **Broken Local Workflows**: If a local server isn't running yet, standard browsers show generic, dead `ERR_CONNECTION_REFUSED` pages with zero diagnostic help.
 - **Lost Process Tracking**: Running `streamlit run app.py` leaves terminal windows cluttering your workspace or orphan python processes hogging ports when the browser is closed.
-
-**Pawer solves this completely.**
 
 ---
 
 ## ✨ Key Features
 
-- 🪶 **Ultra-Lightweight Engine**: Built on top of Microsoft Edge WebView2 (Chromium) natively installed on Windows. Starts in under 200ms, consumes **~35–50 MB RAM** (vs 1.2 GB+ in Chrome), and requires **no bulky 200MB bundled Electron/Chromium binaries**.
+- 🪶 **Ultra-Lightweight Engine**: Built on top of Microsoft Edge WebView2 (Chromium) natively installed on Windows. Starts in under 200ms, consumes **~50–150 MB RAM** (vs ~500 MB+ in Chrome), and requires **no bulky 200MB bundled Electron/Chromium binaries**.
 - 🛡️ **Internet Isolation & Local Guardian**: Strictly accepts local and private LAN traffic (`localhost`, `127.0.0.1`, `[::1]`, `192.168.x.x`, `10.x.x.x`, `file://`, and `pawer://` internal schemes). Navigation to external internet domains (like `google.com`) is **automatically intercepted and blocked**, keeping your work private, distraction-free, and offline.
 - 🔒 **Total Anonymity & Privacy Hardening**:
   - **Ephemeral In-Memory Sessions**: Every launch generates a cryptographically random session ID and an isolated temp directory that is completely wiped on exit.
