@@ -35,9 +35,26 @@ def run_app_on_sta_thread(urls: List[str]):
 
 
 def main():
+    if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+        try:
+            sys.stdout.reconfigure(errors="replace")
+        except Exception:
+            pass
+    if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+        try:
+            sys.stderr.reconfigure(errors="replace")
+        except Exception:
+            pass
+
     parser = argparse.ArgumentParser(
         prog="pawer",
-        description="Pawer — Super lightweight browser designed for Streamlit apps and local apps.",
+        description="Pawer - Super lightweight browser designed for Streamlit apps and local apps.",
+    )
+    parser.add_argument(
+        "-v", "--version",
+        action="version",
+        version="Pawer 1.0.0",
+        help="Show Pawer version",
     )
     parser.add_argument(
         "target",
